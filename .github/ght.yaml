@@ -1,0 +1,41 @@
+---
+cookiecutter:
+  project_name:
+  app_name:
+
+  admin_user_email:
+  admin_user_password:
+  admin_user_username: "{{cookiecutter.user_email.split('@')[0]}}"
+
+  python_version: 3.7
+  use_celery: True
+  wsgi_server: uwsgi
+
+ght:
+  template:
+    url: https://github.com/zeroae/ght-flask-restful
+
+  # TODO: Implement different CLI choices
+  command_line_interface:
+    - (*) Flask
+
+  # TODO: Implment python version choice
+  python_version:
+    - ( ) 3.6
+    - (*) 3.7
+    - ( ) 3.8
+
+  # TODO: Implement task engine choice
+  task_engine:
+    - ( ) celery
+    - ( ) dask
+    - ( ) None
+
+  # TODO: Implement wsgi server choice
+  wsgi_server:
+    - (*) uwsgi
+    - ( ) gunicorn
+    - ( ) None
+
+
+
